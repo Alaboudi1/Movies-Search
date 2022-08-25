@@ -20,7 +20,7 @@ export const App = (): JSX.Element => {
     });
   }, []);
 
-  const search = (searchValue: string): void => {
+  const fetchMovies = (searchValue: string): void => {
     dispatch({
       type: "SEARCH_MOVIES_REQUEST",
     });
@@ -62,7 +62,7 @@ export const App = (): JSX.Element => {
       <div className="title">
         <Header text="Search For Your Favourite Movies 🎥 " />
 
-        <Search search={search} />
+        <Search search={fetchMovies} />
 
         <p className="App-intro">Sharing a few of our favourite movies</p>
       </div>
