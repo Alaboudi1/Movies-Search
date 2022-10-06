@@ -23,36 +23,22 @@
                 "description": "the default behavior for the event was prevented"
             }
         ],
-        "code_pattern": [
-            {
-                "patterns": [
-                    {
-                        "pattern": "preventDefault"
-                    },
-                    {
-                        "pattern-inside": "preventDefault"
-                    }
-                ],
-                "id": "CODE_1",
-                "description": "the default behavior for the event was prevented"
-            }
-        ]
+        "code_pattern": []
     },
-"hypotheses": [
-    {
-        "id": "HYPOTHESIS_1",
-        "hypothesis": "the default behavior for the event was preventchecked",
-        "description": "the default behavior for the event was prevented",
-        "checks": {
-            "pass": [
-                "API_1",
-                "EVENT_1",
-                "NETWORK_1"
-            ],
-            "fail": [
-                "API_1"
-            ]
+    "hypotheses": [
+        {
+            "id": "HYPOTHESIS_1",
+            "hypothesis": "You are not preventing the default behavior of the submit event, which cause the page to reload instead of rendering the new content",
+            "checks": {
+                "pass": [
+                    "API_1",
+                    "EVENT_1",
+                    "NETWORK_1"
+                ],
+                "fail": [
+                    "API_1"
+                ]
+            }
         }
-    }
-]
+    ]
 }

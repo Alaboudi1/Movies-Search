@@ -13,9 +13,8 @@ const Search = ({ search }: { search: search }): JSX.Element => {
     setSearchValue("");
   };
 
-  const callSearchFunction = (e: React.FormEvent<HTMLFormElement>): void => {
+  const callSearchFunction = (): void => {
     search(searchValue);
-    e.preventDefault();
     resetInputField();
   };
 
